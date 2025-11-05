@@ -44,7 +44,7 @@ func main() {
 		// Extract the command from the Message.
 		switch update.Message.Command() {
 		case "hello":
-			msg.Text = "hello world"
+			msg.Text = "hello world miau miau!"
 		default:
 			msg.Text = "I don't know that command"
 		}
