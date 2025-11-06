@@ -32,13 +32,18 @@ func main() {
 	updates := bot.GetUpdatesChan(u)
 
 	for update := range updates {
+		log.Printf("Received update: %+v", update) // Debug log for all updates
 		if update.Message == nil { // ignore any non-Message updates
 			continue
 		}
 
+		log.Printf("Received message from %s: %s", update.Message.From.UserName, update.Message.Text) // Debug log for messages
+
 		if !update.Message.IsCommand() { // ignore any non-command Messages
 			continue
 		}
+
+		log.Printf("Received command: %s", update.Message.Command()) // Debug log for commands
 
 		// Create a new MessageConfig. We don't have text yet,
 		// so we leave it empty.
