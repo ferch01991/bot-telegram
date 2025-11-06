@@ -33,7 +33,7 @@ func main() {
 
 	for update := range updates {
 		log.Printf("Received update: %+v", update) // Debug log for all updates
-		if update.Message == nil { // ignore any non-Message updates
+		if update.Message == nil {                 // ignore any non-Message updates
 			continue
 		}
 
@@ -52,7 +52,7 @@ func main() {
 		// Extract the command from the Message.
 		switch update.Message.Command() {
 		case "hello":
-			msg.Text = "hello world!"
+			msg.Text = "hello world, perrito miau miau!"
 		default:
 			msg.Text = "I don't know that command"
 		}
