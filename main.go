@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -9,6 +10,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Bot de Telegram iniciado..............")
 
 	if err := godotenv.Load(); err != nil {
 		log.Println(".env no encontrado; usando variables de entorno del sistema")
