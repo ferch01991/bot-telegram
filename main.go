@@ -18,6 +18,7 @@ func main() {
 
 	bot, err := tgbotapi.NewBotAPI(os.Getenv("TELEGRAM_APITOKEN"))
 	if err != nil {
+		fmt.Println("Error al crear el bot de Telegram:")
 		log.Panic(err)
 	}
 
