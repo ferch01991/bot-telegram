@@ -1,4 +1,4 @@
-module github.com/ferch01991/bot-telegram.git
+module github.com/ferch01991/bot-telegram
 
 go 1.23.6
 
